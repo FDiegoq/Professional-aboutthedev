@@ -6,10 +6,18 @@
     <title>
         {%block title%} Title {%endblock%}
     </title>
+    {%load static%}
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    {% block css %} <link rel="stylesheet" href="{% static 'src/styles/global.css' %}"> {% endblock %}
 </head>
 <body>
-    <header class="">
-
+    <header class="header">
+        <h1>Aboutthedev</h1>
+        <nav class="nav">
+            <a href="">About</a>
+            <a href="">Contacts</a>
+            <a href="">Home</a>
+        </nav>
     </header>
 
     <main class="">
@@ -18,8 +26,11 @@
         {%endblock%}
     </main>
 
-    <footer>
-
+    <footer class="footer">
+        <p>© 2024 Diego Freire de Queiroz. All rights reserved. <br>
+            Designed and Developed by Diego Freire de Queiroz. <br>
+            For inquiries, contact us at <a href="">github</a> <br>
+            This curriculum is intended for educational purposes only.</p>
     </footer>
     
 </body>
