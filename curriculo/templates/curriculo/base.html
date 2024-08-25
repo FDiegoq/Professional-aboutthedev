@@ -7,16 +7,15 @@
         {%block title%} Title {%endblock%}
     </title>
     {%load static%}
-    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
-    {% block css %} <link rel="stylesheet" href="{% static 'src/styles/global.css' %}"> {% endblock %}
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header class="header">
-        <h1>Aboutthedev</h1>
-        <nav class="nav">
-            <a href="">About</a>
-            <a href="">Contacts</a>
-            <a href="">Home</a>
+<body class="bg-zinc-900 text-white">
+    <header class="flex items-center justify-between p-8">
+        <h1 class="text-2xl text-green-500 font-bold">Aboutthedev</h1>
+        <nav class="flex gap-4 text-green-700">
+            <a href="" class="hover:text-green-500">About</a>
+            <a href="" class="hover:text-green-500">Contacts</a>
+            <a href="" class="hover:text-green-500">Home</a>
         </nav>
     </header>
 
@@ -26,11 +25,13 @@
         {%endblock%}
     </main>
 
-    <footer class="footer">
-        <p>© 2024 Diego Freire de Queiroz. All rights reserved. <br>
-            Designed and Developed by Diego Freire de Queiroz. <br>
-            For inquiries, contact us at <a href="">github</a> <br>
-            This curriculum is intended for educational purposes only.</p>
+    <footer class="">
+        <p>
+            © 2024 Diego Freire de Queiroz. All rights reserved. <br>
+                Designed and Developed by Diego Freire de Queiroz. <br>
+                For inquiries, contact me at github: @Fdiegoq<br>
+                This curriculum is intended for educational purposes only.
+        </p>
     </footer>
     
 </body>
