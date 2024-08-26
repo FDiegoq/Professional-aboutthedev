@@ -33,15 +33,23 @@
     <p class="text-center mt-8">Check it out, the professional development right here!</p>
 
         <div class="flex flex-row justify-evenly items-center gap-8 flex-wrap">
+            {% for curso in cursos%}
             <div class="w-64 h-80 bg-green-500 mt-16 rounded-2xl hover:bg-green-600 transition-colors">
-                <div class="w-full h-32 bg-white rounded-t-2xl"></div>
+                <img src="{{curso.pic.url}}" alt="{{curso.titulo}}" class="w-full h-32 bg-white rounded-t-2xl"></img>
                 <div class="p-2 text-slate-950">
-                    <p class="font-bold text-lg ">Título do curso</p>
-                    <p>Plataforma:</p>
-                    <p>Status:</p>
+                    <p class="font-bold text-lg ">{{curso.titulo}}</p>
+                    <p>Plataforma: {{curso.plataforma}}</p>
+                    <p>Status:
+                        {% if curso.is_learning %}
+                        in progress
+                        {%else%}
+                        done!
+                        {%endif%}
+                    </p>
                 </div>
                 <p class="text-center flex justify-center mt-16 underline text-green-800 hover:text-green-500"><a href="">know more</a></p>
             </div>
+            {%endfor%}
             
         </div>
         
@@ -55,13 +63,15 @@
     <p class="text-center mt-8">Skills, past works, collaborations and others</p>
 
         <div class="flex flex-row justify-evenly items-center gap-8 flex-wrap">
+            {% for skill in skills%}
             <div class="w-96 h-80 bg-green-500 mt-16 rounded-2xl hover:bg-green-600 transition-colors">
-                <div class="w-full h-32 bg-white rounded-t-2xl"></div>
+                <img src="{{skill.pic.url}}" class="w-full h-32 bg-white rounded-t-2xl"></img>
                 <div class="p-2 text-slate-950">
-                    <p class="font-bold text-lg ">Título</p>
-                    <p class="">Descrição Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate similique animi rerum velit ipsa culpa at dolor iste, explicabo cum sunt temporibus incidunt ratione fugit esse maiores nesciunt asperiores deleniti?</p>
+                    <p class="font-bold text-lg ">{{skill.titulo}}</p>
+                    <p class="">{{skill.descricao}}</p>
                 </div>
             </div>
+            {%endfor%}
         </div>
         
 
