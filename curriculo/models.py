@@ -5,11 +5,20 @@ from django.db import models
 class Habilidade(models.Model):
     titulo=models.CharField(max_length=120)
     is_learning=models.BooleanField()
-    pic=models.ImageField(upload_to='images/')
+    descricao=models.TextField()
+    pic=models.ImageField(upload_to='skills/')
+
+    def __str__(self):
+        return self.titulo
 
 class Curso(models.Model):
     titulo=models.CharField(max_length=250)
     instituicao=models.CharField(max_length=120)
-    pic=models.ImageField(upload_to='images/')
+    plataforma=models.CharField(max_length=150)
+    pic=models.ImageField(upload_to='cursos/')
+
+    def __str__(self):
+        return self.titulo
+
 
 
