@@ -7,7 +7,7 @@ def index(request):
     cursos=Curso.objects.all()
     skills=Habilidade.objects.all()
     context={
-        cursos:'cursos',
-        skills:'skills'
+        'cursos':cursos,
+        'skills':skills
     }
     return render(request, 'curriculo/index.html', context)
