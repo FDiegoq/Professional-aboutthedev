@@ -14,8 +14,8 @@
         </div>
     </div>
    
-    <div class="w-72 h-72 bg-green-500 rounded-full shadow-2xl shadow-green-500">
-        <img src="{% static 'curriculo/static/src/assets/profilepic.jpg' %}" alt="foto do desenvolvedor" class="h-full w-full">
+    <div class="w-72 h-72 bg-green-500 bg-[url('static/src/assets/profilepic.jpg')] bg-center bg-contain rounded-full shadow-2xl shadow-green-500">
+
     </div>
 
 </div>
@@ -40,6 +40,7 @@
                 <div class="p-2 text-slate-950">
                     <p class="font-bold text-lg ">{{curso.titulo}}</p>
                     <p>Plataforma: {{curso.plataforma}}</p>
+                    <p>Professor: {{curso.professor}}</p>
                     <p>Status:
                         {% if curso.is_learning %}
                         in progress
@@ -48,7 +49,6 @@
                         {%endif%}
                     </p>
                 </div>
-                <p class="text-center flex justify-center mt-16 underline text-green-800 hover:text-green-500"><a href="">know more</a></p>
             </div>
             {%endfor%}
             

@@ -11,3 +11,5 @@ def index(request):
         'skills':skills
     }
     return render(request, 'curriculo/index.html', context)
+
+
